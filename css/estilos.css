@@ -1,0 +1,222 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.body {
+    font-family: 'Verdana', sans-serif;
+    background: linear-gradient(180deg, #fffbe6, #fff1b6);
+    color: #2c3e50;
+    padding: 30px;
+}
+
+/* Estilo abstracto del header */
+.encabezado {
+    background: #F1C40F;
+    padding: 60px 30px 40px;
+    text-align: center;
+    border-radius: 0 0 80px 80px;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.encabezado::before {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: radial-gradient(circle at center, #F7DC6F 20%, transparent 70%);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.titulo-principal {
+    font-size: 3em;
+    color: #2C3E50;
+    z-index: 1;
+    position: relative;
+}
+
+.frase-inspiradora {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-top: 10px;
+    color: #2C3E50;
+    z-index: 1;
+    position: relative;
+}
+
+.logo-figura {
+    margin-top: 30px;
+    z-index: 2;
+    position: relative;
+}
+
+.logo-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.logo-caption {
+    color: #2c3e50;
+    font-size: 0.9em;
+}
+
+/* Navegación estilo burbuja */
+.barra-navegacion {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.lista-navegacion {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.enlace-navegacion {
+    background-color: #F39C12;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.enlace-navegacion:hover {
+    background-color: #F1C40F;
+    transform: scale(1.05);
+}
+
+/* Secciones abstractas */
+.seccion {
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 40px 10px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    max-width: 900px;
+    position: relative;
+}
+
+.seccion::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 40px;
+    height: 40px;
+    background: #F7DC6F;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.subtitulo {
+    font-size: 1.8em;
+    color: #F39C12;
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    text-align: justify;
+    font-size: 1.1em;
+}
+
+/* Listas animadas */
+.lista-logros li,
+.lista-intereses li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.lista-logros li::before,
+.lista-intereses li::before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    color: #F1C40F;
+}
+
+/* Tabla de habilidades en estilo tarjetas */
+.tabla-habilidades {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top: 20px;
+}
+
+.tabla-habilidades th,
+.tabla-habilidades td {
+    background-color: #fffde7;
+    padding: 12px 15px;
+    text-align: center;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tabla-habilidades thead th {
+    background-color: #F1C40F;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.tabla-habilidades tfoot th {
+    background-color: #fff4b3;
+    font-style: italic;
+    color: #333;
+}
+
+/* Multimedia */
+.articulo-audio {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.audio-presentacion {
+    width: 80%;
+    max-width: 500px;
+    border: 3px solid #F1C40F;
+    border-radius: 15px;
+}
+
+/* Pie de página abstracto */
+.pie-pagina {
+    background-color: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    border-radius: 20px 20px 0 0;
+    font-size: 0.95em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 2em;
+    }
+
+    .subtitulo {
+        font-size: 1.4em;
+    }
+
+    .lista-navegacion {
+        flex-direction: column;
+    }
+
+    .audio-presentacion {
+        width: 100%;
+    }
+}
